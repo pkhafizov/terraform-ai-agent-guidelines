@@ -1,24 +1,23 @@
 # terraform-ai-agent-guidelines
 
-This repository contains Terraform configuration for AWS infrastructure. The `envs/dev` workspace demonstrates initializing AWS credentials via a named profile.
+This repository demonstrates recommended workflows for AI agents that manage Terraform code for AWS infrastructure. It includes helper scripts and a Makefile that wrap common Terraform commands.
 
-## Using an AWS profile
+## Structure
 
-Configure your AWS credentials using the AWS CLI:
+- `AGENTS.md` – policies and instructions for automated agents.
+- `scripts/` – helper bash scripts used by the Makefile.
+- `Makefile` – convenience targets for format, lint, security and testing.
+- `go.mod` – Go module definition for terratest helpers.
 
-```bash
-aws configure --profile myprofile
-```
+Additional Terraform modules and environment directories can be added as the project grows.
 
-Then run the Terraform workflows with:
+## Usage
 
-```bash
-make init dir=envs/dev
-make validate dir=envs/dev
-```
-
-Set the `profile` variable when planning:
+Execute the Makefile targets against a specific Terraform directory:
 
 ```bash
-terraform -chdir=envs/dev plan -var="profile=myprofile" -var="region=us-east-1"
+make init dir=<path>
+make validate dir=<path>
 ```
+
+Other available targets include `fmt-check`, `lint`, `security-scan`, `terratest`, `docs` and `infracost
