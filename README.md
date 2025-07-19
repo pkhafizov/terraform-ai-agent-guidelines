@@ -20,4 +20,4 @@ make init dir=<path>
 make validate dir=<path>
 ```
 
-Other available targets include `fmt-check`, `lint`, `security-scan`, `terratest`, `docs` and `infracost
+Other available targets include `fmt-check`, `lint`, `security-scan`, `terratest`, `docs` and `infracost`
