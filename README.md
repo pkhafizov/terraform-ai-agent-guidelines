@@ -2,6 +2,8 @@
 
 This repository demonstrates recommended workflows for AI agents that manage Terraform code for AWS infrastructure. It includes helper scripts and a Makefile that wrap common Terraform commands.
 
+**Note:** Where the AGENTS.md file uses `YOUR_AI_AGENT`, replace it with the name of your AI agent.
+
 ## Structure
 
 - `AGENTS.md` – policies and instructions for automated agents.
